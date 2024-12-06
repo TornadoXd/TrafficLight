@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace TrafficLight
 {
-    class Events
+    public static class Events
     {
+        // האירוע שיתרחש כשצבע הרמזור ישתנה, הוא היוזם של האירוע
+        // הדמויות יגיבו לאירוע
+        public static Action<TrafficLight.light> OnChange;
     }
 }
