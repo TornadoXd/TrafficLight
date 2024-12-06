@@ -5,6 +5,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.UI.Xaml;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Shapes;
 
@@ -18,6 +19,8 @@ namespace TrafficLight
         private Ellipse _GreenLight;
         private Ellipse _YellowLight;
         private Ellipse _RedLight;
+        private bool _isAuto = false;
+        private DispatcherTimer _autoTimer;
 
         public TrafficLight(light color, Ellipse GreenLight, Ellipse YellowLight, Ellipse RedLight)
         {
@@ -26,10 +29,33 @@ namespace TrafficLight
             _GreenLight = GreenLight;
             _RedLight = RedLight;
             _YellowLight = YellowLight;
+
+            _autoTimer = new DispatcherTimer();
+            _autoTimer.Stop();
+            _autoTimer.Interval = TimeSpan.FromSeconds(1);
+            _autoTimer.Tick += _autoTimer_Tick;
+        }
+        private void _autoTimer_Tick(object sender, object e)
+        {
+            NextColor();
         }
         public enum light
         {
             red, green, yellow
+        }
+        public void SetIsAuto(bool isAuto)
+        {
+            _isAuto = isAuto;
+            if (_isAuto)
+            {
+                _autoTimer.Start();
+            }
+            else
+                _autoTimer.Stop();
+        }
+        public bool GetIsAuto()
+        {
+            return _isAuto;
         }
 
         public void NextColor()

@@ -119,11 +119,14 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Events.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="objects\Dog.cs" />
+    <Compile Include="objects\Santa.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TrafficLight.cs" />
+    <Compile Include="objects\TrafficLight.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -156,12 +159,13 @@
     <Content Include="Assets\App\SplashScreen.scale-150.png" />
     <Content Include="Assets\App\SplashScreen.scale-200.png" />
     <Content Include="Assets\App\SplashScreen.scale-400.png" />
-    <Content Include="Assets\Gifs\Girlidle.gif" />
-    <Content Include="Assets\Gifs\GirlJump.gif" />
-    <Content Include="Assets\Gifs\GIrlRun.gif" />
-    <Content Include="Assets\Gifs\Pumpkinidle.gif" />
-    <Content Include="Assets\Gifs\PumpkinJump.gif" />
-    <Content Include="Assets\Gifs\PumpkinRun.gif" />
+    <Content Include="Assets\Gifs\dog_Idle.gif" />
+    <Content Include="Assets\Gifs\dog_jump.gif" />
+    <Content Include="Assets\Gifs\dog_run.gif" />
+    <Content Include="Assets\Gifs\santa_idle.gif" />
+    <Content Include="Assets\Gifs\santa_jump.gif" />
+    <Content Include="Assets\Gifs\santa_run.gif" />
+    <Content Include="Assets\Images\junction.png" />
     <Content Include="Assets\Images\stoplight_green.png" />
     <Content Include="Assets\Images\stoplight_red.png" />
     <Content Include="Assets\Images\stoplight_redyellow.png" />
@@ -173,15 +177,17 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="MainPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
       <Version>6.2.12</Version>
     </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>

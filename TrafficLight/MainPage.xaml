@@ -10,9 +10,9 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
 
-    <Grid>
+    <Grid >
         <Grid.Background>
-            <ImageBrush ImageSource="Assets/Images/bg.jpg"></ImageBrush>
+            <ImageBrush ImageSource="Assets/Images/junction.png"></ImageBrush>
         </Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition></RowDefinition>
@@ -42,20 +42,21 @@
             <ColumnDefinition></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <Image x:Name="GirlImg" Source="Assets/Gifs/Girlidle.gif" Stretch="Fill" Grid.Column="0" Grid.Row="4" Grid.RowSpan="5" Grid.ColumnSpan="4"></Image>
-        <Rectangle Fill="Black" Grid.Column="5" Grid.Row="3" Grid.ColumnSpan="3" Grid.RowSpan="6">
+        <Image x:Name="santaImg"  Stretch="Fill" Grid.Column="0" Grid.Row="4" Grid.RowSpan="6" Grid.ColumnSpan="4"></Image>
+        <Rectangle Fill="Gray" Grid.Column="5" Grid.Row="2" Grid.ColumnSpan="3" Grid.RowSpan="9">
 
         </Rectangle>
-        <Ellipse x:Name="redLight" Fill="Red" Grid.Column="5" Grid.Row="3" Grid.ColumnSpan="3" Grid.RowSpan="2" Opacity="1"></Ellipse>
-        <Ellipse x:Name="yellowLight" Fill="Yellow"  Grid.Column="5" Grid.Row="5" Grid.ColumnSpan="3" Grid.RowSpan="2"></Ellipse>
-        <Ellipse x:Name="greenLight" Fill="Green" Grid.Column="5" Grid.Row="7" Grid.ColumnSpan="3" Grid.RowSpan="2"></Ellipse>
-        <Image Source="Assets/Gifs/Pumpkinidle.gif" Stretch="Fill" Grid.Column="9" Grid.Row="4" Grid.RowSpan="5" Grid.ColumnSpan="3"></Image>
+        <Ellipse x:Name="redLight" Fill="Red" Grid.Column="5" Grid.Row="2" Grid.ColumnSpan="3" Grid.RowSpan="3" Opacity="1"></Ellipse>
+        <Ellipse x:Name="yellowLight" Fill="Yellow"  Grid.Column="5" Grid.Row="5" Grid.ColumnSpan="3" Grid.RowSpan="3"></Ellipse>
+        <Ellipse x:Name="greenLight" Fill="Green" Grid.Column="5" Grid.Row="8" Grid.ColumnSpan="3" Grid.RowSpan="3"></Ellipse>
+        <Image x:Name="DogImg" Stretch="Fill" Grid.Column="9" Grid.Row="4" Grid.RowSpan="6" Grid.ColumnSpan="3"></Image>
 
-        <Viewbox Grid.RowSpan="2" Grid.Column="10" Grid.ColumnSpan="4">
-            <Button x:Name="ManualBtn"  Click="ManualBtn_Click"  FontSize="79" Content="Manual"  Foreground="Blue"></Button>
+        <Viewbox Grid.RowSpan="2" Grid.Row="1" Grid.Column="10" Grid.ColumnSpan="4">
+            <Button x:Name="ManualBtn" Click="ManualBtn_Click"  FontSize="79"  Content="Manual"   Foreground="Black"></Button>
         </Viewbox>
-        <Viewbox Grid.RowSpan="2" Grid.Column="0" Grid.ColumnSpan="3">
-            <Button x:Name="AutoBtn"  Click="ManualBtn_Click"  FontSize="79" Content="Auto"  Foreground="Blue"></Button>
+        <Viewbox Grid.RowSpan="2" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3">
+            <Button x:Name="AutoBtn"  Click="AutoBtn_Click"  FontSize="79" Content="Auto"  Foreground="Black"></Button>
         </Viewbox>
+        
     </Grid>
 </Page>
