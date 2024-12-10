@@ -22,6 +22,7 @@ namespace TrafficLight.objects
             _Image = Img;
             _state = StateType.idle;
             MatchGifToState();
+            Events.OnChange += MatchStanceToLight;
         }
         public void MatchGifToState()
         {
@@ -38,5 +39,21 @@ namespace TrafficLight.objects
                     break;
             }
         }
+        public void MatchStanceToLight(TrafficLight.light light)
+        {
+            switch (light)
+            {
+                case TrafficLight.light.red:
+                    _state = StateType.idle;
+                    break;
+                case TrafficLight.light.yellow:
+                    _state = StateType.ready;
+                    break;
+                case TrafficLight.light.green:
+                    _state = StateType.go;
+                    break;
+            }
+            MatchGifToState();
         }
+    }
 }

@@ -11,5 +11,6 @@ namespace TrafficLight
         // האירוע שיתרחש כשצבע הרמזור ישתנה, הוא היוזם של האירוע
         // הדמויות יגיבו לאירוע
         public static Action<TrafficLight.light> OnChange;
+        
     }
 }

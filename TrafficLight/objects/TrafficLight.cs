@@ -78,7 +78,11 @@ namespace TrafficLight
                     _RedLight.Fill = new SolidColorBrush(Windows.UI.Color.FromArgb(255, 255, 0, 0));
                     break;
             }
-
+            // הרמזור יוזם אירוע לאחר שהחליף את מצבו
+            // בהזדמנות זו הוא מוסר את מצבו המעודכן
+            if (Events.OnChange != null) {
+                Events.OnChange(_color);
+            }
         }
 
         public void Clear()

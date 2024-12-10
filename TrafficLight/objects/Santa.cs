@@ -21,6 +21,7 @@ namespace TrafficLight.objects
             _Image = Img;
             _state = StateType.idle;
             MatchGifToState();
+            Events.OnChange += ChangeState;
         }
         public void MatchGifToState()
         {
