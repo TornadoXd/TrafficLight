@@ -8,23 +8,12 @@ using Windows.UI.Xaml.Media.Imaging;
 
 namespace TrafficLight.objects
 {
-    class Dog
+    class Dog : Character
     {
-        public enum StateType
+        public Dog(Image Img) : base(Img)
         {
-            idle, ready, go
         }
-        private StateType _state;
-        private Image _Image;
-        private TrafficLight _light;
-        public Dog(Image Img)
-        {
-            _Image = Img;
-            _state = StateType.idle;
-            MatchGifToState();
-            Events.OnChange += MatchStanceToLight;
-        }
-        public void MatchGifToState()
+        protected override void MatchGifToState()
         {
             switch (_state)
             {
@@ -39,21 +28,6 @@ namespace TrafficLight.objects
                     break;
             }
         }
-        public void MatchStanceToLight(TrafficLight.light light)
-        {
-            switch (light)
-            {
-                case TrafficLight.light.red:
-                    _state = StateType.idle;
-                    break;
-                case TrafficLight.light.yellow:
-                    _state = StateType.ready;
-                    break;
-                case TrafficLight.light.green:
-                    _state = StateType.go;
-                    break;
-            }
-            MatchGifToState();
-        }
+
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using TrafficLight.objects;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -21,19 +22,16 @@ namespace TrafficLight
     public sealed partial class MainPage : Page
     {
         TrafficLight TrafficLight;
-        private objects.Santa ziv;
-        private objects.Dog Dog;
+        private Character[] _Characters;
         private bool _isAuto;
         public MainPage()
         {
-
-
             this.InitializeComponent();
             TrafficLight = new TrafficLight(TrafficLight.light.red, greenLight, yellowLight, redLight);
             TrafficLight.Clear();
-            ziv = new objects.Santa(santaImg);
-            Dog = new objects.Dog(DogImg);
-
+            _Characters = new Character[2];
+            _Characters[0] = new Dog(DogImg);
+            _Characters[1] = new Santa(santaImg);
         }
 
         private void ManualBtn_Click(object sender, RoutedEventArgs e)

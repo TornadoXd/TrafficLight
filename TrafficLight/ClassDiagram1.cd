@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="TrafficLight.App" Collapsed="true">
+    <Position X="5.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAQAAIAAA=</HashCode>
+      <FileName>App.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TrafficLight.Events" Collapsed="true">
+    <Position X="7" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Events.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TrafficLight.MainPage" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAEAAAAAAAAAAgAAAAAAQAIAAAAAAAAA=</HashCode>
+      <FileName>MainPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.242" Collapsed="true" />
+  </Class>
+  <Class Name="TrafficLight.TrafficLight" Collapsed="true">
+    <Position X="7" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAgAAAAIAAIAAAAAAQAAAIAAAAgAAIAAQABEAAA=</HashCode>
+      <FileName>objects\TrafficLight.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TrafficLight.objects.Character" Collapsed="true">
+    <Position X="2" Y="0.5" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="TrafficLight.objects.Character.StateType" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>objects\Character.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAJAAAAAAACAAAAAAAAAQAAAAAAAAAAAA=</HashCode>
+      <FileName>objects\Character.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TrafficLight.objects.Dog" Collapsed="true">
+    <Position X="3.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>objects\Dog.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TrafficLight.objects.Santa" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>objects\Santa.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
